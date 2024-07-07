@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <div class="tabela">
+            <button class="tab_btn">REGISTRADOS</button>
+            <button class="tab_btn">NÃO REGISTRADOS</button>
+    </div>
+    <div class="conteudobox">
+        <div class="registrados">
+            <p>Quem possui veículo já registrado pelo NK pode obter as 
+            informações necessárias para manter o veículo regularizado e 
+            também para realizar os serviços de Comunicação de Venda ou 
+            Transferência de Propriedade.</p>
+        </div>
+        <div class="registrados">
+            <p>Quem comprou um veículo novo (0 km) pode obter as 
+            informações necessárias para realizar o serviço de Primeiro 
+            Registro (Primeiro Emplacamento).</p>
+        </div>
+    </div>    
+    </div>
+    <script>
+        const tabs= document.querySelectorAll('.tab_btn');
+        const all_content= document.querySelectorAll('.registrados');
+
+        tabs.forEach((tab, index)=>{
+            tab.addEventListener('click', ()=>{
+                tabs.forEach(tab=>{tab.classList.remove('active')});
+                tab.classList.add('active');
+
+            all_content.forEach(content=>{content.classList.remove('active')});
+            all_content[index].classList.add('active');
+            })
+        })
+    </script>
+    </nav>
+    
+</body>
+</html>
